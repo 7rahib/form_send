@@ -1,0 +1,30 @@
+div {
+    color: white;
+}
+
+.input1 {
+    outline: none !important;
+    background-color: inherit !important;
+    color: white;
+}
+
+.check1 {
+    background-color: white;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(255, 255, 255) !important;
+    opacity: 1 !important;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgb(255, 255, 255) !important;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgb(255, 255, 255) !important;
+}
