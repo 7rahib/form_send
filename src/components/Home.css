@@ -2,6 +2,11 @@ div {
     color: white;
 }
 
+.bg {
+    background-color: #EC3B37;
+    min-height: 100vh;
+}
+
 .input1 {
     outline: none !important;
     background-color: inherit !important;
@@ -27,4 +32,17 @@ div {
 ::-ms-input-placeholder {
     /* Microsoft Edge */
     color: rgb(255, 255, 255) !important;
+}
+
+.gender-box {
+    padding: 5px;
+    background-color: white;
+    color: black;
+    border: 2px solid #FCB131;
+    border-radius: 5px;
+}
+
+.gender-box:hover,
+.chosen {
+    background-color: #f4e9d6;
 }

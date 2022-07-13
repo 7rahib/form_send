@@ -1,17 +1,21 @@
 import React, { useRef, useState } from 'react';
 import logo from '../assets/logo2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faPerson } from '@fortawesome/free-solid-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import './Home.css'
 import emailjs from 'emailjs-com'
+import { useNavigate } from "react-router-dom";
 
 
 const Home = () => {
+    console.log("Hiiiiiiiiiiiii");
+    const navigate = useNavigate();
     const [checked, setChecked] = useState(false);
     const form = useRef();
     const sendEmail = (e) => {
+        console.log("Hello");
         e.preventDefault();
 
         emailjs.sendForm('service_27p8ofk', 'template_jimyer9', form.current, 'xxmKrIM7dC-yMCFZl')
@@ -21,13 +25,23 @@ const Home = () => {
                 console.log(error.text);
             });
 
-        e.reset();
+        // e.reset();
+        navigate("/message");
     };
+
+    function myFuction(genderId) {
+        //console.log(genderId);
+        document.getElementById(genderId).classList.add('chosen');
+        if (genderId != "male") document.getElementById('male').classList.remove('chosen');
+        if (genderId != "female") document.getElementById('female').classList.remove('chosen');
+        if (genderId != "x") document.getElementById('x').classList.remove('chosen');
+
+    }
 
     return (
         <div>
-            <div class="navbar grid">
-                <div class="place-content-center">
+            <div className="navbar grid">
+                <div className="place-content-center">
                     <img className='w-24 h-24' src={logo} alt="" />
                 </div>
                 <hr />
@@ -40,22 +54,27 @@ const Home = () => {
                 <div>
                     <div className='flex flex-col justify-center items-center'>
                         <div className=''>
+                            <div className='grid grid-cols-3 gap-4 mt-3'>
+                                <div onClick={() => myFuction('male')} id="male" className='gender-box text-center chosen'><h4>MRS</h4></div>
+                                <div onClick={() => myFuction('female')} id="female" className='gender-box text-center'><h4>MR</h4></div>
+                                <div onClick={() => myFuction('x')} id="x" className='gender-box text-center'><h4>X</h4></div>
+                            </div>
                             <div className='border-b-2 px-2'>
-                                <input type="text" placeholder="First Name" class="input w-full m-3 input1" name="user_name" />
+                                <input type="text" required placeholder="First Name" className="input w-full m-3 input1" name="user_name" />
                             </div>
                             <div className='flex items-center border-b-2'>
                                 <span className='pl-3'><FontAwesomeIcon icon={faEnvelope} /></span>
-                                <input type="text" placeholder="Email" class="input w-full m-3 input1" name="user_email" />
+                                <input type="text" required placeholder="Email" className="input w-full m-3 input1" name="user_email" />
                             </div>
                             <div className='flex items-center border-b-2'>
                                 <span className='pl-3'><FontAwesomeIcon icon={faPhone} /></span>
-                                <input type="text" placeholder="Phone Number" class="input w-full m-3 input1" name="user_phone" />
+                                <input type="text" required placeholder="Phone Number" className="input w-full m-3 input1" name="user_phone" />
                             </div>
                         </div>
                     </div>
                     <div className='flex justify-center mt-5 ml-5'>
                         <div>
-                            <input type="checkbox" class="checkbox check1" checked={checked}
+                            <input required type="checkbox" className="checkbox check1" checked={checked}
                                 onChange={(e) => setChecked(e.target.checked)} />
                         </div>
                         <div className='w-15 flex justify-center'>
@@ -65,13 +84,14 @@ const Home = () => {
                         </div>
                     </div>
                     <div className='flex justify-evenly mt-5 text-white w-50'>
-                        <div className='flex items-center btn btn-wide btn-warning'>
-                            <input type="submit" Value='Submit' name="user_phone"></input>
+                        <div className='flex items-center'>
+                            <input className='btn btn-wide btn-warning' type="Submit" value={"Submit"} name="user_phone"></input>
                         </div>
                     </div>
                 </div >
             </form >
         </div >
+
     );
 };
 

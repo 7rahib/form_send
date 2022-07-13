@@ -1,0 +1,36 @@
+.message-container {
+    color: white;
+}
+
+.message-container h1 {
+    font-size: 32px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.message-container h2 {
+    font-size: 26px;
+}
+
+.message-container h4 {
+    font-size: 18px;
+}
+
+.links ul li a {
+    /* color: #2B50AA; */
+    color: white;
+    font-size: 18px;
+}
+
+.links ul li {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.links ul li:hover {
+    background-color: #2B50AA;
+    border-radius: 5px;
+}
