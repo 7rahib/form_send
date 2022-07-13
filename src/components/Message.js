@@ -13,7 +13,7 @@ const Messsage = () => {
         </div>
       </div>
       <div className="flex flex-col items-center message-container ml-3">
-        <div className="mb-16 mt-4">
+        <div className="mb-16 mt-10">
           <h1>Thank you for your time!</h1>
         </div>
         <div className="mb-8">
@@ -25,7 +25,9 @@ const Messsage = () => {
         <div className="links mb-4">
           <ul>
             <li>
-              <a>Visit our Youtube channel</a>
+              <a href="https://www.youtube.com/channel/UCs4xiI5WCNRagoQ06k6irEw">
+                Visit our Youtube channel
+              </a>
             </li>
           </ul>
         </div>
