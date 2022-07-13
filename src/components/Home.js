@@ -53,22 +53,22 @@ const Home = () => {
             <form ref={form} onSubmit={sendEmail} className='flex justify-center'>
                 <div>
                     <div className='flex flex-col justify-center items-center'>
-                        <div className=''>
-                            <div className='grid grid-cols-3 gap-4 mt-3'>
-                                <div onClick={() => myFuction('male')} id="male" className='gender-box text-center chosen'><h4>MRS</h4></div>
-                                <div onClick={() => myFuction('female')} id="female" className='gender-box text-center'><h4>MR</h4></div>
-                                <div onClick={() => myFuction('x')} id="x" className='gender-box text-center'><h4>X</h4></div>
+                        <div className='mx-3'>
+                            <div className='flex mt-5'>
+                                <div onClick={() => myFuction('male')} id="male" className='gender-box text-center chosen mr-5 flex items-center justify-center'><h4>MRS</h4></div>
+                                <div onClick={() => myFuction('female')} id="female" className='gender-box text-center mr-5 flex items-center justify-center'><h4>MR</h4></div>
+                                <div onClick={() => myFuction('x')} id="x" className='gender-box text-center flex items-center justify-center'><h4>X</h4></div>
                             </div>
-                            <div className='border-b-2 px-2'>
-                                <input type="text" required placeholder="First Name" className="input w-full m-3 input1" name="user_name" />
+                            <div className='border-b-2 px-36'>
+                                <input type="text" required placeholder="Your Name" className="input w-full m-3 input1" name="user_name" />
                             </div>
                             <div className='flex items-center border-b-2'>
                                 <span className='pl-3'><FontAwesomeIcon icon={faEnvelope} /></span>
-                                <input type="text" required placeholder="Email" className="input w-full m-3 input1" name="user_email" />
+                                <input type="text" required placeholder="X Please enter a valid email address" className="input w-full m-3 input1" name="user_email" />
                             </div>
                             <div className='flex items-center border-b-2'>
                                 <span className='pl-3'><FontAwesomeIcon icon={faPhone} /></span>
-                                <input type="text" required placeholder="Phone Number" className="input w-full m-3 input1" name="user_phone" />
+                                <input type="text" required placeholder="Phone number including country code (optional)e.g. +1 123 456 7890" className="input w-full m-3 input1 flex flex-wrap" name="user_phone" />
                             </div>
                         </div>
                     </div>
@@ -79,7 +79,7 @@ const Home = () => {
                         </div>
                         <div className='w-15 flex justify-center'>
                             <div>
-                                <h1 className='ml-2'>I agree with the <span className='text-blue-700'>terms and condition</span> and I'm also happily subscribing to your newsletter.</h1>
+                                <h1 className='ml-2'>I agree with the <a href='https://www.loansdirect.capital/terms-of-use.html' className='text-blue-700'>terms and condition</a> and I'm also happily subscribing to your newsletter.</h1>
                             </div>
                         </div>
                     </div>
