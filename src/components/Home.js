@@ -64,7 +64,7 @@ const Home = () => {
                             </div>
                             <div className='flex items-center border-b-2'>
                                 <span className='pl-3'><FontAwesomeIcon icon={faEnvelope} /></span>
-                                <input type="textarea" required placeholder="Email address" className="input w-full m-3 input1" name="user_email" />
+                                <input type="email" required placeholder="Email address" className="input w-full m-3 input1" name="user_email" />
 
                             </div>
                             <div className='flex items-center border-b-2'>
