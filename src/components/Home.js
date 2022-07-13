@@ -44,47 +44,51 @@ const Home = () => {
                 <div className="place-content-center">
                     <img className='w-24 h-24' src={logo} alt="" />
                 </div>
-                <hr />
+
             </div>
             <div>
-                <h1 className='text-4xl font-semibold text-center mt-5 text-white'>You seem like a great candidate. We would love to help!</h1>
+                <h1 className='text-4xl font-semibold text-center mt-5 text-white'>You seem like a great candidate. We would love <br />  <span ><h1 className='mt-4'>to help!</h1></span></h1>
             </div>
-            <h1 className='text-2xl text-center mt-12 text-gray-200'>Sign up for our waitlist here</h1>
+            <h1 className='text-2xl text-center mb-8 mt-4 text-gray-200'>Sign up for our waitlist here</h1>
             <form ref={form} onSubmit={sendEmail} className='flex justify-center'>
-                <div>
+                <div className='form-container'>
                     <div className='flex flex-col justify-center items-center'>
-                        <div className='mx-3'>
+                        <div className='mx-3 input-container'>
                             <div className='flex mt-5'>
                                 <div onClick={() => myFuction('male')} id="male" className='gender-box text-center chosen mr-5 flex items-center justify-center'><h4>MRS</h4></div>
                                 <div onClick={() => myFuction('female')} id="female" className='gender-box text-center mr-5 flex items-center justify-center'><h4>MR</h4></div>
                                 <div onClick={() => myFuction('x')} id="x" className='gender-box text-center flex items-center justify-center'><h4>X</h4></div>
                             </div>
-                            <div className='border-b-2 px-36'>
-                                <input type="text" required placeholder="Your Name" className="input w-full m-3 input1" name="user_name" />
+                            <div className='border-b-2 w-full'>
+                                <input type="text" required placeholder="Your Name" className="input input-name w-full m-3 input1" name="user_name" />
                             </div>
                             <div className='flex items-center border-b-2'>
                                 <span className='pl-3'><FontAwesomeIcon icon={faEnvelope} /></span>
-                                <input type="text" required placeholder="X Please enter a valid email address" className="input w-full m-3 input1" name="user_email" />
+                                <input type="textarea" required placeholder="Email address" className="input w-full m-3 input1" name="user_email" />
+
                             </div>
                             <div className='flex items-center border-b-2'>
                                 <span className='pl-3'><FontAwesomeIcon icon={faPhone} /></span>
-                                <input type="text" required placeholder="Phone number including country code (optional)e.g. +1 123 456 7890" className="input w-full m-3 input1 flex flex-wrap" name="user_phone" />
+                                {/* <input type="text" multiline="true" required placeholder="Phone number including country code&#10;(optional)e.g. +1 123 456 7890" className="input w-full m-3 input1 flex flex-wrap" name="user_phone" /> */}
+                                <textarea required placeholder="Phone number including country code&#10;(optional)e.g. +1 123 456 7890" className="input w-full m-3 input1 text-area flex flex-wrap" name="user_phone" />
                             </div>
                         </div>
                     </div>
-                    <div className='flex justify-center mt-5 ml-5'>
+
+                    <div className='flex mt-8 checkbox-container'>
                         <div>
                             <input required type="checkbox" className="checkbox check1" checked={checked}
                                 onChange={(e) => setChecked(e.target.checked)} />
                         </div>
                         <div className='w-15 flex justify-center'>
                             <div>
-                                <h1 className='ml-2'>I agree with the <a href='https://www.loansdirect.capital/terms-of-use.html' className='text-blue-700'>terms and condition</a> and I'm also happily subscribing to your newsletter.</h1>
+                                <h1 className='ml-2'>I agree with the <a href='https://www.loansdirect.capital/terms-of-use.html' className='text-blue-700'>terms and condition</a> and I'm also <br /> happily subscribing to your newsletter.</h1>
                             </div>
                         </div>
                     </div>
-                    <div className='flex justify-evenly mt-5 text-white w-50'>
-                        <div className='flex items-center'>
+
+                    <div className='flex justify-evenly mt-5 text-white btn-container'>
+                        <div className='flex btn-top'>
                             <input className='btn btn-wide btn-warning' type="Submit" value={"Submit"} name="user_phone"></input>
                         </div>
                     </div>

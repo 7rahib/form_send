@@ -7,14 +7,46 @@ div {
     min-height: 100vh;
 }
 
+.form-container {
+    width: 460px;
+}
+
+.btn-container,
+.btn-top,
+.btn,
+.input-container {
+    /* background-color: yellow; */
+    width: 100%;
+}
+
+.text-area {
+    margin-bottom: 20px;
+    resize: none;
+}
+
+.text-area::-webkit-scrollbar {
+    display: none;
+}
+
 .input1 {
     outline: none !important;
     background-color: inherit !important;
     color: white;
+    margin-bottom: 5px;
+    width: 100%;
+    min-height: 60px;
+}
+
+.input-name {
+    padding-left: 0;
 }
 
 .check1 {
     background-color: white;
+}
+
+.checkbox-container {
+    margin-left: 0;
 }
 
 ::placeholder {
