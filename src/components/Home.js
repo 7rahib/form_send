@@ -93,12 +93,21 @@ const Home = () => {
                   <h4>X</h4>
                 </div>
               </div>
-              <div className="border-b-2 w-full">
+              {/* <div className="border-b-2 ">
                 <input
                   type="text"
                   required
                   placeholder="Your Name"
                   className="input input-name w-full m-3 input1"
+                  name="user_name"
+                />
+              </div> */}
+              <div className="flex items-center border-b-2">
+                <input
+                  type="text"
+                  required
+                  placeholder="Your Name"
+                  className="input w-full m-3 input1"
                   name="user_name"
                 />
               </div>
