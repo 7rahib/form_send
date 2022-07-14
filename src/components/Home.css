@@ -19,6 +19,10 @@ div {
   width: 100%;
 }
 
+.btn-container {
+  margin-bottom: 10px;
+}
+
 .text-area {
   margin-bottom: 20px;
   resize: none;
@@ -80,13 +84,36 @@ div {
 .chosen {
   background-color: #f4e9d6;
 }
+
+.responsive {
+  display: none;
+}
+
+.not-responsive {
+  display: block;
+}
+
 @media (max-width: 680px) {
   .parent-container {
     width: 100%;
     display: flex;
     justify-content: center;
   }
+
   .child-container {
     width: 96%;
   }
+
+  .motto {
+    font-size: 24px;
+  }
+
+  .not-responsive {
+    display: none;
+  }
+
+  .responsive {
+    display: block;
+  }
+
 }
