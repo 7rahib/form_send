@@ -80,3 +80,13 @@ div {
 .chosen {
   background-color: #f4e9d6;
 }
+@media (max-width: 680px) {
+  .parent-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .child-container {
+    width: 96%;
+  }
+}
